@@ -5,9 +5,9 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HttpClientModule} from "@angular/common/http";
 import {HeaderComponent} from './components';
-import {CityWeatherCardListComponent} from './containers';
+import {CityWeatherCardListComponent, CityWeatherDetailComponent} from './containers';
 import {CityWeatherCardComponent} from './components';
-import { IconMapPipe } from './pipes';
+import {IconMapPipe} from './pipes';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,8 @@ import { IconMapPipe } from './pipes';
     HeaderComponent,
     CityWeatherCardListComponent,
     CityWeatherCardComponent,
-    IconMapPipe
+    IconMapPipe,
+    CityWeatherDetailComponent
   ],
   imports: [
     BrowserModule,

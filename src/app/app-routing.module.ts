@@ -1,11 +1,15 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {CityWeatherCardListComponent} from "./containers";
+import {CityWeatherCardListComponent, CityWeatherDetailComponent} from "./containers";
 
 const routes: Routes = [
   {
     path: '',
     component: CityWeatherCardListComponent,
+  },
+  {
+    path: 'weather/:cityName',
+    component: CityWeatherDetailComponent
   },
   {
     path: '**',
