@@ -1,0 +1,8 @@
+<div class="city-weather-cards-list">
+  <div *ngFor="let city of cityList">
+    {{city.name}}
+  </div>
+  <div *ngIf="cityList.length === 0">
+    No City Found!
+  </div>
+</div>
