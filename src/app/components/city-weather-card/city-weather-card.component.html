@@ -1,0 +1,29 @@
+<article class="weather-card" *ngIf="weather">
+  <a routerLink="weather/{{city.name}}" class="weather-card__link" title="{{city.name}} City Weather Details">
+    <div class="weather-card__body">
+      <div class="weather-card__body-container">
+        <div class="weather-card__city">
+          <div class="weather-card__weather-icon">
+            <i class="fa fa-cloud"></i>
+          </div>
+          {{this.city.name}}
+        </div>
+        <div class="weather-card__temp">
+          <div class="degree">
+            {{weather.main.temp}}° c
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="weather-card__footer">
+      <div class="weather-card__detail">
+        <h5 class="weather-card__detail-title">Humidity</h5>
+        <div class="weather-card__detail-value">{{weather.main.humidity}}%</div>
+      </div>
+      <div class="weather-card__detail">
+        <h5 class="weather-card__detail-title">Wind</h5>
+        <div class="weather-card__detail-value">{{weather.wind.speed}}m/s</div>
+      </div>
+    </footer>
+  </a>
+</article>

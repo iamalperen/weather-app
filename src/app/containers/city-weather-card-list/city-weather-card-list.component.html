@@ -1,7 +1,5 @@
 <div class="city-weather-cards-list">
-  <div *ngFor="let city of cityList">
-    {{city.name}}
-  </div>
+  <app-city-weather-card *ngFor="let city of cityList" [city]="city"></app-city-weather-card>
   <div *ngIf="cityList.length === 0">
     No City Found!
   </div>

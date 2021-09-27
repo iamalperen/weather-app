@@ -6,12 +6,14 @@ import {AppComponent} from './app.component';
 import {HttpClientModule} from "@angular/common/http";
 import {HeaderComponent} from './components';
 import {CityWeatherCardListComponent} from './containers';
+import {CityWeatherCardComponent} from './components';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    CityWeatherCardListComponent
+    CityWeatherCardListComponent,
+    CityWeatherCardComponent
   ],
   imports: [
     BrowserModule,
