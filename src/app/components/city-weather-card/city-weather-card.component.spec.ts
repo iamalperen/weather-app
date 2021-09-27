@@ -2,6 +2,7 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {CityWeatherCardComponent} from './city-weather-card.component';
 import {HttpClientModule} from "@angular/common/http";
+import { IconMapPipe } from 'src/app/pipes';
 
 describe('CityWeatherCardComponent', () => {
   let component: CityWeatherCardComponent;
@@ -9,7 +10,7 @@ describe('CityWeatherCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CityWeatherCardComponent],
+      declarations: [CityWeatherCardComponent, IconMapPipe],
       imports: [HttpClientModule]
     })
       .compileComponents();

@@ -7,13 +7,15 @@ import {HttpClientModule} from "@angular/common/http";
 import {HeaderComponent} from './components';
 import {CityWeatherCardListComponent} from './containers';
 import {CityWeatherCardComponent} from './components';
+import { IconMapPipe } from './pipes';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     CityWeatherCardListComponent,
-    CityWeatherCardComponent
+    CityWeatherCardComponent,
+    IconMapPipe
   ],
   imports: [
     BrowserModule,
