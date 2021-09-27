@@ -1,3 +1,3 @@
 <div class="city-weather-detail">
-  {{cityName}}
+  <app-weather-detail *ngIf="weather" [weather]="weather"></app-weather-detail>
 </div>

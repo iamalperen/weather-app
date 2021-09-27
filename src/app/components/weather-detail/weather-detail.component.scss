@@ -1,0 +1,122 @@
+.weather-detail {
+  position: relative;
+  border-radius: 4px;
+  min-height: 400px;
+  padding: 20px 30px 30px;
+  background-color: #8175c7;
+  background-image: url('../../../assets/city-bg.webp');
+  background-position: 0 0;
+  background-repeat: repeat;
+  animation: slideBG 80s linear infinite;
+  will-change: background-position;
+  background-size: auto;
+  font-weight: 300;
+}
+
+@keyframes slideBG {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -4000px 0;
+  }
+}
+
+.weather-detail__city {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px; /* Need a specific value to work */
+  color: #fff;
+  font-size: 48px;
+
+  @media only screen and (min-width: 768px) {
+    margin: 0;
+    top: 40px;
+    left: 30px;
+  }
+}
+
+.weather-detail__details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  margin-top: 30px;
+
+  @media only screen and (min-width: 768px) {
+    margin: 0;
+  }
+}
+
+.weather-detail__icon {
+  font-size: 60px;
+  color: #fff;
+}
+
+.weather-detail__current-temp {
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 50px;
+  margin: 20px;
+  line-height: 1;
+
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    font-size: 60px;
+  }
+
+  @media only screen and (min-width: 992px) {
+    font-size: 72px;
+  }
+}
+
+.weather-detail__max-min-temp {
+  display: flex;
+  color: #fff;
+  font-size: 14px;
+}
+
+.weather-detail__min-temp {
+  margin-right: 20px;
+  font-weight: 300;
+
+}
+
+.weather-detail__description {
+  color: #fff;
+  font-size: 32px;
+  margin: 15px;
+  text-transform: capitalize;
+}
+
+.weather-detail__extras {
+  display: flex;
+  margin-top: 20px;
+}
+
+.weather-detail__extra-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 0 25px;
+}
+
+.weather-detail__extra-item-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.weather-detail__extra-item-title {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.weather-detail__extra-item-value {
+  font-size: 12px;
+}
