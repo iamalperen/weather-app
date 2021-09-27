@@ -4,7 +4,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HttpClientModule} from "@angular/common/http";
-import {HeaderComponent, WeatherDetailComponent} from './components';
+import {HeaderComponent, WeatherDetailComponent, ForecastComponent} from './components';
 import {CityWeatherCardListComponent, CityWeatherDetailComponent} from './containers';
 import {CityWeatherCardComponent} from './components';
 import {IconMapPipe} from './pipes';
@@ -17,7 +17,8 @@ import {IconMapPipe} from './pipes';
     CityWeatherCardComponent,
     IconMapPipe,
     CityWeatherDetailComponent,
-    WeatherDetailComponent
+    WeatherDetailComponent,
+    ForecastComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {City, Weather} from "../../models";
+import {City, Forecast, Weather} from "../../models";
 import {WeatherService} from "../../services";
 
 @Component({
@@ -11,6 +11,7 @@ import {WeatherService} from "../../services";
 export class CityWeatherDetailComponent implements OnInit {
   public cityName: string;
   public weather!: Weather;
+  public forecast!: Forecast[];
 
   constructor(private route: ActivatedRoute, private weatherService: WeatherService, private router: Router) {
     this.cityName = <string>route.snapshot.paramMap.get('cityName');
@@ -25,6 +26,11 @@ export class CityWeatherDetailComponent implements OnInit {
       () => {this.router.navigate(['/'])}
     );
 
+    // Getting forecast of city
+    this.weatherService.getForecast(city).subscribe(
+      (forecast: any) => {this.forecast = forecast.list;},
+      () => {this.router.navigate(['/']);}
+    );
 
   }
 
