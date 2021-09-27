@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {CityWeatherCardListComponent, CityWeatherDetailComponent} from "./containers";
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     component: CityWeatherCardListComponent,
