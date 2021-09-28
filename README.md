@@ -63,6 +63,8 @@ You can add or remove city from this list.
 
 ## Project Overview
 
+Demo: https://iamalperen.github.io/demo/weather-app/
+
 Screenshoots:
 
 ![](https://github.com/iamalperen/weather-app/blob/master/ss1.png)
