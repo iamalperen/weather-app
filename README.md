@@ -18,27 +18,27 @@ Angular weather app that displays the weather and forecast of the defined cities
 
 ### Project Folder Structure
 
-📦app <br/>
-┣ 📂components <br/>
-┃ ┣ 📂city-weather-card <br/>
-┃ ┣ 📂forecast <br/>
-┃ ┣ 📂header <br/>
-┃ ┣ 📂weather-detail <br/>
-┣ 📂constants <br/>
-┃ ┣ 📂city <br/>
-┃ ┣ 📂icon <br/>
-┣ 📂containers <br/>
-┃ ┣ 📂city-weather-card-list <br/>
-┃ ┣ 📂city-weather-detail <br/>
-┣ 📂models <br/>
-┃ ┣ 📂city <br/>
-┃ ┣ 📂forecast <br/>
-┃ ┣ 📂weather <br/>
-┣ 📂pipes <br/>
-┃ ┣ 📂icon-map <br/>
-┗ 📂services <br/>
-  ┣ 📂city <br/>
-  ┗ 📂weather <br/>
+📦 app <br/>
+┣ 📂 components <br/>
+┃ ┣ 📂 city-weather-card <br/>
+┃ ┣ 📂 forecast <br/>
+┃ ┣ 📂 header <br/>
+┃ ┣ 📂 weather-detail <br/>
+┣ 📂 constants <br/>
+┃ ┣ 📂 city <br/>
+┃ ┣ 📂 icon <br/>
+┣ 📂 containers <br/>
+┃ ┣ 📂 city-weather-card-list <br/>
+┃ ┣ 📂 city-weather-detail <br/>
+┣ 📂 models <br/>
+┃ ┣ 📂 city <br/>
+┃ ┣ 📂 forecast <br/>
+┃ ┣ 📂 weather <br/>
+┣ 📂 pipes <br/>
+┃ ┣ 📂 icon-map <br/>
+┗ 📂 services <br/>
+  ┣ 📂 city <br/>
+  ┗ 📂 weather <br/>
 
 
 ### City List
@@ -67,9 +67,9 @@ Demo: https://iamalperen.github.io/demo/weather-app/
 
 Screenshoots:
 
-![](https://raw.githubusercontent.com/iamalperen/weather-app/master/ss1.png)
+![](https://github.com/iamalperen/weather-app/blob/master/ss1.png)
 
-![](https://raw.githubusercontent.com/iamalperen/weather-app/master/ss2.png)
+![](https://github.com/iamalperen/weather-app/blob/master/ss2.png)
 
 
 ## Build
