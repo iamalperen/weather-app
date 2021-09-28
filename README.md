@@ -1,27 +1,112 @@
-# WeatherApp
+# Weather App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.6.
+Angular weather app that displays the weather and forecast of the defined cities by consuming OpenWeather Data API.
 
-## Development server
+[![Packagist](https://img.shields.io/badge/backbase_task-v1.0.0-blue)]()
+[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)]() 
+[![PyPI](https://img.shields.io/pypi/status/Django.svg)]()
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Details
+- This project was generated with Angular CLI version 12.2.6
+- TypeScript is used for development
+- BEM is used for CSS and HTML conventions
+- SASS is used for CSS-Preprocessor
+- Fully Responsive
+- Normalize.css
+- Font-awesome
+- Karma for unit tests
 
-## Code scaffolding
+### Project Folder Structure
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+📦app <br/>
+┣ 📂components <br/>
+┃ ┣ 📂city-weather-card <br/>
+┃ ┣ 📂forecast <br/>
+┃ ┣ 📂header <br/>
+┃ ┣ 📂weather-detail <br/>
+┣ 📂constants <br/>
+┃ ┣ 📂city <br/>
+┃ ┣ 📂icon <br/>
+┣ 📂containers <br/>
+┃ ┣ 📂city-weather-card-list <br/>
+┃ ┣ 📂city-weather-detail <br/>
+┣ 📂models <br/>
+┃ ┣ 📂city <br/>
+┃ ┣ 📂forecast <br/>
+┃ ┣ 📂weather <br/>
+┣ 📂pipes <br/>
+┃ ┣ 📂icon-map <br/>
+┗ 📂services <br/>
+  ┣ 📂city <br/>
+  ┗ 📂weather <br/>
+
+
+### City List
+
+The cities are loaded from a list in `app/constants/city/city.constants.ts`. 
+
+Example CityList:
+
+```js script
+export const CityList: City[] = [
+  {name: 'Amsterdam'},
+  {name: 'Berlin'},
+  {name: 'Barcelona'},
+  {name: 'Paris'},
+  {name: 'Rome'},
+  {name: 'Istanbul'}
+];
+```
+
+You can add or remove city from this list.
+
+
+## Project Overview
+
+Demo: https://iamalperen.github.io/demo/weather-app/
+
+Screenshoots:
+
+![](https://raw.githubusercontent.com/iamalperen/weather-app/master/ss1.png)
+
+![](https://raw.githubusercontent.com/iamalperen/weather-app/master/ss2.png)
+
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Make sure that you have `npm` on your dev machine
 
-## Running unit tests
+- Run `npm install -g @angular/cli` to install angular-cli tool
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Run `npm install` to install npm dependencies of project
 
-## Running end-to-end tests
+- Run `ng build` to build project
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## Development Environment
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Run `ng serve` for a dev server after first build.
+
+- Navigate to `http://localhost:4200/`.
+
+- The app will automatically reload if you change any of the source files.
+
+
+## Production Environment
+
+- Run `ng build --configuration=production` to build project in prod environment
+
+- Run `ng serve --configuration=production` to serve project in prod environment
+
+- Navigate to `http://localhost:4200/`.
+
+
+## Test Environment
+
+- Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+
+## Meta
+
+Created and maintained by [Alperen](https://github.com/iamalperen) under [MIT](LICENSE.md) License
+
