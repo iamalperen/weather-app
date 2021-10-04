@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {City, Forecast, Weather} from "../../models";
 import {WeatherService} from "../../services";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-city-weather-detail',
@@ -10,8 +11,8 @@ import {WeatherService} from "../../services";
 })
 export class CityWeatherDetailComponent implements OnInit {
   public cityName: string;
-  public weather!: Weather;
-  public forecast!: Forecast[];
+  public weather!: Observable<Weather>;
+  public forecast!: Observable<Forecast[]>;
 
   constructor(private route: ActivatedRoute, private weatherService: WeatherService, private router: Router) {
     this.cityName = <string>route.snapshot.paramMap.get('cityName');
@@ -21,17 +22,10 @@ export class CityWeatherDetailComponent implements OnInit {
     const city: City = {name: this.cityName};
 
     // Getting weather of city
-    this.weatherService.getWeather(city).subscribe(
-      (weather: any) => {this.weather = weather;},
-      () => {this.router.navigate(['/'])}
-    );
+    this.weather = this.weatherService.getWeather(city);
 
     // Getting forecast of city
-    this.weatherService.getForecast(city).subscribe(
-      (forecast: any) => {this.forecast = forecast.list;},
-      () => {this.router.navigate(['/']);}
-    );
-
+    this.forecast = this.weatherService.getForecast(city);
   }
 
 }

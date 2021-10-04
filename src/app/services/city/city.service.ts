@@ -17,9 +17,9 @@ export class CityService {
    * Mocking client-server API
    */
   public getCities(): Observable<City[]> {
-    return Observable.create((observer: Observer<City[]>) => {
+    return new Observable<City[]>((observer: Observer<City[]>) => {
       observer.next(this.CityList);
-      return observer;
+      observer.complete();
     });
   }
 }

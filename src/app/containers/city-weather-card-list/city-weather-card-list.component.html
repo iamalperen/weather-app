@@ -1,6 +1,6 @@
 <div class="city-weather-cards-list">
-  <app-city-weather-card *ngFor="let city of cityList" [city]="city"></app-city-weather-card>
-  <div *ngIf="cityList.length === 0">
+  <app-city-weather-card *ngFor="let city of (cityList | async)" [city]="city"></app-city-weather-card>
+  <div *ngIf="(cityList | async)?.length === 0">
     No City Found!
   </div>
 </div>

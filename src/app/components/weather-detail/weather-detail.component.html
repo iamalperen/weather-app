@@ -1,34 +1,34 @@
-<div class="weather-detail">
+<div class="weather-detail" *ngIf="(weather | async); let weather">
   <div class="weather-detail__city">
     {{weather.name}}
   </div>
   <div class="weather-detail__details">
     <div class="weather-detail__icon">
-      <i class="fa fa-{{weather.weather[0].icon | iconMap}}"></i>
+      <i class="fa fa-{{weather.icon | iconMap}}"></i>
     </div>
     <div class="weather-detail__current-temp">
-      {{weather.main.temp}}° c
+      {{weather.temp}}° c
     </div>
     <div class="weather-detail__max-min-temp">
-      <div class="weather-detail__min-temp">Low: {{weather.main.temp_min}}° c</div>
-      <div class="weather-detail__max-temp">High: {{weather.main.temp_max}}° c</div>
+      <div class="weather-detail__min-temp">Low: {{weather.tempMin}}° c</div>
+      <div class="weather-detail__max-temp">High: {{weather.tempMax}}° c</div>
     </div>
-    <div class="weather-detail__description">{{weather.weather[0].description}}</div>
+    <div class="weather-detail__description">{{weather.description}}</div>
     <div class="weather-detail__extras">
       <div class="weather-detail__extra-item">
         <i class="fas fa-thermometer-half weather-detail__extra-item-icon"></i>
         <div class="weather-detail__extra-item-title">Reel Feel</div>
-        <div class="weather-detail__extra-item-value">{{weather.main.feels_like}}° c</div>
+        <div class="weather-detail__extra-item-value">{{weather.feelsLike}}° c</div>
       </div>
       <div class="weather-detail__extra-item">
         <i class="fas fa-wind weather-detail__extra-item-icon"></i>
         <div class="weather-detail__extra-item-title">Wind</div>
-        <div class="weather-detail__extra-item-value">{{weather.wind.speed}}m/s</div>
+        <div class="weather-detail__extra-item-value">{{weather.windSpeed}}m/s</div>
       </div>
       <div class="weather-detail__extra-item">
         <i class="fas fa-water weather-detail__extra-item-icon"></i>
         <div class="weather-detail__extra-item-title">Humidity</div>
-        <div class="weather-detail__extra-item-value">{{weather.main.humidity}}%</div>
+        <div class="weather-detail__extra-item-value">{{weather.humidity}}%</div>
       </div>
     </div>
   </div>

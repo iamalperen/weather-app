@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {City, Weather} from "../../models";
 import {WeatherService} from "../../services";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-city-weather-card',
@@ -9,14 +10,14 @@ import {WeatherService} from "../../services";
 })
 export class CityWeatherCardComponent implements OnInit {
   @Input() city!: City;
-  public weather!: Weather;
+  public weather!: Observable<Weather>;
 
   constructor(private weatherService: WeatherService) {
   }
 
   ngOnInit(): void {
     // Getting weather of city
-    this.weatherService.getWeather(this.city).subscribe((weather: any) => {this.weather = weather;});
+    this.weather = this.weatherService.getWeather(this.city);
   }
 
 }

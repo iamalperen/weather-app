@@ -1,12 +1,19 @@
-<div class="forecast">
+<div class="forecast" *ngIf="(hourlyForecasts | async)?.length; else loading">
   <div class="forecast__title">
     <h6 class="title">Hourly Forecast</h6>
   </div>
   <ul class="forecast__hourly-forecasts">
-    <li class="forecast-item" *ngFor="let forecast of hourlyForecasts">
+    <li class="forecast-item" *ngFor="let forecast of hourlyForecasts | async">
       <div class="forecast-item__title">{{forecast.dt | date: 'MMM d h:mm a'}}</div>
-      <div class="forecast-item__icon"><i class="fas fa-{{forecast.weather[0].icon | iconMap}}"></i></div>
-      <div class="forecast-item__temp">{{forecast.main.temp}}°c</div>
+      <div class="forecast-item__icon"><i class="fas fa-{{forecast.icon | iconMap}}"></i></div>
+      <div class="forecast-item__temp">{{forecast.temp}}°c</div>
     </li>
   </ul>
 </div>
+<ng-template #loading>
+  <div class="forecast">
+    <div class="forecast__title">
+      <h6 class="title">Forecasts are loading...</h6>
+    </div>
+  </div>
+</ng-template>
