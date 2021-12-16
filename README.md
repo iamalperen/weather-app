@@ -2,7 +2,6 @@
 
 Angular weather app that displays the weather and forecast of the defined cities by consuming OpenWeather Data API.
 
-[![Packagist](https://img.shields.io/badge/backbase_task-v1.0.0-blue)]()
 [![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)]() 
 [![PyPI](https://img.shields.io/pypi/status/Django.svg)]()
 
